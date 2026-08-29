@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Login or create an account on GYANI - Indian Knowledge Systems">
+
+    <title>Login / Signup | GYANI</title>
+
+
+    <!-- UNIVERSAL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- LOGIN CSS -->
+    <link rel="stylesheet" href="css/login.css">
+
+    
+     <script src="js/script.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+
+                <span class="logo-symbol"> ॐ </span>
+
+                <div>
+                    <span class="logo-title"> GYANI </span>
+
+                    <p class="logo-subtitle" data-en="Indian Knowledge Systems" data-hi="भारतीय ज्ञान प्रणाली">
+                        Indian Knowledge Systems
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="navbar" id="navbar">
+
+                <a href="/index.html" class="nav-link" data-en="Home" data-hi="होम">
+                    Home
+                </a>
+
+
+                <a href="#notes" class="nav-link" data-en="Notes" data-hi="नोट्स">
+                    Notes
+                </a>
+
+
+                <a href="about.html" class="nav-link" data-en="About" data-hi="हमारे बारे में">
+                    About
+                </a>
+
+
+                <a href="contact.html" class="nav-link" data-en="Contact" data-hi="संपर्क">
+                    Contact
+                </a>
+
+            </nav>
+
+
+
+            <!-- LANGUAGE + THEME + MOBILE -->
+
+            <div class="nav-actions">
+
+                <!-- LANGUAGE SWITCH -->
+
+                </div>
+                <!-- THEME -->
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    ☾
+                </button>
+
+                <!-- MOBILE -->
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation menu"
+                    aria-expanded="false">
+                    ☰
+                </button>
+                
+            </div>
+        </div>
+    </header>
+
+
+    <!-- =========================================================
+         MAIN AUTH AREA
+         ========================================================= -->
+
+    <main class="auth-main">
+
+
+        <!-- =====================================================
+             LOGIN
+             ===================================================== -->
+
+        <section
+            class="auth-container"
+            id="loginBox">
+
+
+            <!-- HEADER -->
+
+            <div class="auth-header">
+
+                <div class="auth-icon">
+                    ॐ
+                </div>
+
+
+                <h1
+                    data-en="Welcome Back"
+                    data-hi="पुनः स्वागत है">
+
+                    Welcome Back
+
+                </h1>
+
+
+                <p
+                    data-en="Login to continue your GYANI learning journey."
+                    data-hi="अपनी GYANI सीखने की यात्रा जारी रखने के लिए लॉगिन करें।">
+
+                    Login to continue your GYANI learning journey.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div
+                class="message"
+                id="loginMessage"
+                role="alert">
+            </div>
+
+
+
+            <!-- LOGIN FORM -->
+
+            <form id="loginForm">
+
+
+                <!-- USER ID / GMAIL -->
+
+                <div class="form-group">
+
+                    <label
+                        for="loginEmail"
+                        data-en="Gmail ID / User ID"
+                        data-hi="Gmail ID / User ID">
+
+                        Gmail ID / User ID
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="loginEmail"
+                        name="loginEmail"
+                        placeholder="Enter Gmail ID or user ID"
+                        data-placeholder-en="Enter Gmail ID or user ID"
+                        data-placeholder-hi="Gmail ID या User ID दर्ज करें"
+                        autocomplete="username"
+                        required>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label
+                        for="loginPassword"
+                        data-en="Password"
+                        data-hi="पासवर्ड">
+
+                        Password
+
+                    </label>
+
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="loginPassword"
+                            placeholder="Enter password"
+                            data-placeholder-en="Enter password"
+                            data-placeholder-hi="पासवर्ड दर्ज करें"
+                            autocomplete="current-password"
+                            required>
+
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-password="loginPassword"
+                            aria-label="Show password">
+
+                            👁
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OPTIONS -->
+
+                <div class="form-options">
+
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe">
+
+                        <span
+                            data-en="Remember me"
+                            data-hi="मुझे याद रखें">
+
+                            Remember me
+
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="button"
+                        class="forgot"
+                        id="forgotPasswordBtn"
+                        data-en="Forgot password?"
+                        data-hi="पासवर्ड भूल गए?">
+
+                        Forgot password?
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                    data-en="Login"
+                    data-hi="लॉगिन">
+
+                    Login
+
+                </button>
+
+            </form>
+
+
+
+            <!-- UNIVERSAL LOGIN -->
+
+            <div class="universal-login">
+
+                <strong
+                    data-en="Don't want to create an account?"
+                    data-hi="क्या आप अकाउंट नहीं बनाना चाहते?">
+
+                    Don't want to create an account?
+
+                </strong>
+
+
+                <p
+                    data-en="Use the universal account:"
+                    data-hi="यूनिवर्सल अकाउंट का उपयोग करें:">
+
+                    Use the universal account:
+
+                    <br>
+
+
+                    <span>ID:</span>
+
+                    <code>user123</code>
+
+
+                    <span class="credential-separator">
+                        |
+                    </span>
+
+
+                    <span>Password:</span>
+
+                    <code>pass1234</code>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SIGNUP SWITCH -->
+
+            <div class="switch-auth">
+
+                <span
+                    data-en="Don't have an account?"
+                    data-hi="क्या आपका अकाउंट नहीं है?">
+
+                    Don't have an account?
+
+                </span>
+
+
+                <button
+                    type="button"
+                    id="showSignupBtn"
+                    data-en="Create Account"
+                    data-hi="अकाउंट बनाएं">
+
+                    Create Account
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SIGNUP
+             ===================================================== -->
+
+        <section
+            class="auth-container"
+            id="signupBox">
+
+
+            <!-- HEADER -->
+
+            <div class="auth-header">
+
+                <div class="auth-icon">
+                    ✦
+                </div>
+
+
+                <h1
+                    data-en="Create Account"
+                    data-hi="अकाउंट बनाएं">
+
+                    Create Account
+
+                </h1>
+
+
+                <p
+                    data-en="Create your GYANI account to access your learning resources."
+                    data-hi="अपने अध्ययन संसाधनों तक पहुंचने के लिए GYANI अकाउंट बनाएं।">
+
+                    Create your GYANI account to access your learning resources.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div
+                class="message"
+                id="signupMessage"
+                role="alert">
+            </div>
+
+
+
+            <!-- SIGNUP FORM -->
+
+            <form id="signupForm">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label
+                        for="signupName"
+                        data-en="Full Name"
+                        data-hi="पूरा नाम">
+
+                        Full Name
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="signupName"
+                        name="signupName"
+                        placeholder="Enter your full name"
+                        data-placeholder-en="Enter your full name"
+                        data-placeholder-hi="अपना पूरा नाम दर्ज करें"
+                        autocomplete="name"
+                        required>
+
+                </div>
+
+
+
+                <!-- GMAIL -->
+
+                <div class="form-group">
+
+                    <label
+                        for="signupEmail"
+                        data-en="Gmail ID"
+                        data-hi="Gmail ID">
+
+                        Gmail ID
+
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        name="signupEmail"
+                        placeholder="example@gmail.com"
+                        data-placeholder-en="example@gmail.com"
+                        data-placeholder-hi="example@gmail.com"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label
+                        for="signupPassword"
+                        data-en="Password"
+                        data-hi="पासवर्ड">
+
+                        Password
+
+                    </label>
+
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="signupPassword"
+                            name="signupPassword"
+                            placeholder="Create a password"
+                            data-placeholder-en="Create a password"
+                            data-placeholder-hi="पासवर्ड बनाएं"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required>
+
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-password="signupPassword"
+                            aria-label="Show password">
+
+                            👁
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SIGNUP BUTTON -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                    data-en="Create Account"
+                    data-hi="अकाउंट बनाएं">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+
+
+            <!-- LOGIN SWITCH -->
+
+            <div class="switch-auth">
+
+                <span
+                    data-en="Already have an account?"
+                    data-hi="क्या आपका पहले से अकाउंट है?">
+
+                    Already have an account?
+
+                </span>
+
+
+                <button
+                    type="button"
+                    id="showLoginBtn"
+                    data-en="Login"
+                    data-hi="लॉगिन">
+
+                    Login
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FORGOT PASSWORD MODAL
+         ========================================================= -->
+
+    <div
+        class="modal-overlay"
+        id="forgotModal"
+        aria-hidden="true">
+
+
+        <div
+            class="forgot-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="forgotTitle">
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeForgotBtn"
+                aria-label="Close">
+
+                ×
+
+            </button>
+
+
+            <div class="modal-icon">
+                ?
+            </div>
+
+
+            <h2
+                id="forgotTitle"
+                data-en="Forgot Password?"
+                data-hi="पासवर्ड भूल गए?">
+
+                Forgot Password?
+
+            </h2>
+
+
+            <p
+                data-en="Password recovery is currently handled manually. Please contact the GYANI developer team for assistance."
+                data-hi="पासवर्ड रिकवरी वर्तमान में मैन्युअल रूप से की जाती है। सहायता के लिए GYANI डेवलपर टीम से संपर्क करें।">
+
+                Password recovery is currently handled manually.
+                Please contact the GYANI developer team for assistance.
+
+            </p>
+
+
+
+            <div class="developer-info">
+
+                <strong
+                    data-en="Developer Team"
+                    data-hi="डेवलपर टीम">
+
+                    Developer Team
+
+                </strong>
+
+
+                <a href="tel:6266384770">
+
+                    📞 Parikshit Shukla — 6266384770
+
+                </a>
+
+
+                <a href="mailto:parikshitshukla30@gmail.com">
+
+                    ✉ parikshitshukla30@gmail.com
+
+                </a>
+
+            </div>
+
+
+
+            <button
+                type="button"
+                class="close-modal"
+                id="closeForgotBtnBottom"
+                data-en="Close"
+                data-hi="बंद करें">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+ <div class="footer-bottom">
+
+        <div class="container">
+
+            <p
+                data-en="© 2026 GYANI. All rights reserved."
+                data-hi="© 2026 GYANI. सर्वाधिकार सुरक्षित।">
+
+                © 2026 GYANI. All rights reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <!-- Universal JS -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Login / Signup JS -->
+    <script src="js/login.js" defer></script>
+
+
+</body>
+
+</html>

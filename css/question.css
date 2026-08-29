@@ -1,0 +1,537 @@
+/* =========================================================
+   GYANI
+   IKS QUESTION & ANSWER GUIDE
+   qstyle.css
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+:root {
+
+    /* ---------- Background ---------- */
+
+    --bg: #f8f7f3;
+    --bg-secondary: #efede7;
+
+    /* ---------- Surfaces ---------- */
+
+    --surface: #ffffff;
+    --surface-hover: #f5f2eb;
+
+    /* ---------- Text ---------- */
+
+    --text: #1d1d1b;
+    --text-secondary: #5f5b54;
+    --text-light: #858077;
+
+    /* ---------- Brand ---------- */
+
+    --primary: #8b3a12;
+    --primary-dark: #68290c;
+    --primary-light: #b85c27;
+
+    /* ---------- Borders ---------- */
+
+    --border: #ddd8cf;
+
+    /* ---------- Effects ---------- */
+
+    --shadow:
+        0 15px 40px rgba(0, 0, 0, 0.07);
+
+    --shadow-small:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
+    /* ---------- Layout ---------- */
+
+    --radius: 14px;
+    --container: 1180px;
+
+    /* ---------- Animation ---------- */
+
+    --transition: 0.25s ease;
+}
+
+
+/* =========================================================
+   DARK BLUE THEME
+   ========================================================= */
+
+body.dark-theme {
+
+    --bg: #0b1628;
+    --surface: #14243a;
+    --surface-soft: #17263b;
+
+    --text: #edf4ff;
+    --text-light: #8999ad;
+
+    --primary: #e39a62;
+    --primary-dark: #c97840;
+    --primary-soft: #f0b383;
+
+    --border: #29405d;
+
+    
+    --shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    line-height: 1.75;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+    width: min(1200px, 94%);
+
+    margin: 45px auto 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-soft),
+            var(--surface)
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+    padding:30px 25%;
+
+    text-align: center;
+}
+
+
+.unit-label {
+
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+
+    color: var(--heading);
+
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+}
+
+
+.hero p {
+
+    color: var(--text-light);
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   FAQ CONTAINER
+   ========================================================= */
+
+.faq {
+
+    width: min(1100px, 94%);
+
+    margin: 30px auto 70px;
+}
+
+
+/* =========================================================
+   DETAILS
+   ========================================================= */
+
+.faq details {
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    margin-bottom: 16px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        background var(--transition),
+        border-color var(--transition);
+}
+
+
+.faq details[open] {
+
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.faq summary {
+
+    position: relative;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    padding: 20px 55px 20px 23px;
+
+    color: var(--heading);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    background: var(--surface);
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+
+.faq summary::-webkit-details-marker {
+
+    display: none;
+}
+
+
+.faq summary::after {
+
+    content: "+";
+
+    position: absolute;
+
+    right: 22px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--primary);
+
+    font-size: 1.5rem;
+
+    font-weight: 400;
+}
+
+
+.faq details[open] summary::after {
+
+    content: "−";
+}
+
+
+.faq summary:hover {
+
+    background: var(--surface-soft);
+
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   ANSWER
+   ========================================================= */
+
+.answer {
+
+    padding: 5px 25px 30px;
+
+    color: var(--text);
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+.answer h3 {
+
+    margin-top: 15px;
+
+    color: var(--primary);
+
+    font-size: 1.25rem;
+}
+
+
+.answer h4 {
+
+    margin-top: 10px;
+    margin-bottom: 2px;
+    color: var(--heading);
+    font-size: 1rem;
+}
+
+
+.answer p {
+
+    margin-bottom: 5px;
+
+    color: var(--text);
+
+    font-size: 0.97rem;
+
+    text-align: justify;
+}
+
+
+.answer ul {
+
+    margin: 10px 0 20px 22px;
+}
+
+
+.answer li {
+
+    margin-bottom: 7px;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.answer table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 20px 0;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-size: 0.94rem;
+}
+
+
+.answer th,
+.answer td {
+
+    border:
+        1px solid var(--border);
+
+    padding: 12px;
+
+    text-align: left;
+
+    vertical-align: top;
+}
+
+
+.answer th {
+
+    background: var(--primary-soft);
+
+    color: var(--heading);
+
+    font-weight: 700;
+}
+
+
+.answer tr:hover td {
+
+    background: var(--surface-soft);
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+
+        margin-top: 25px;
+
+        padding: 35px 20px;
+    }
+
+
+    .faq {
+
+        width: 94%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        font-size: 15px;
+    }
+
+    .hero {
+
+        padding: 28px 16px;
+
+        border-radius: 13px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 1.65rem;
+    }
+
+
+    .hero p {
+
+        font-size: 0.92rem;
+    }
+
+
+    .faq summary {
+
+        padding: 17px 45px 17px 17px;
+
+        font-size: 0.92rem;
+    }
+
+
+    .faq summary::after {
+
+        right: 15px;
+    }
+
+
+    .answer {
+
+        padding:
+            3px 17px 23px;
+    }
+
+
+    .answer h3 {
+
+        font-size: 1.1rem;
+    }
+
+
+    .answer h4 {
+
+        font-size: 0.95rem;
+    }
+
+
+    .answer p {
+
+        font-size: 0.91rem;
+
+        text-align: left;
+    }
+
+
+    /* Prevent table from breaking mobile layout */
+
+    .answer {
+
+        overflow-x: auto;
+    }
+
+
+    .answer table {
+
+        min-width: 650px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+
+        font-size: 1.45rem;
+    }
+
+
+    .faq summary {
+
+        font-size: 0.87rem;
+    }
+
+}
